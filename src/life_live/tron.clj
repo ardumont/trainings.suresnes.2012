@@ -77,3 +77,8 @@
                 (ref-set r name)
                 (bot pos bot-state)))))))))
 
+#_(doseq [name "OZT8"] 
+  (future (play name 
+                (avoider-bot-factory (rand-nth (keys to-left)))
+                [(rand-int 20)
+                 (rand-int 20)])))
